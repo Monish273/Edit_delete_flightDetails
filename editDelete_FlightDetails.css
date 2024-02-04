@@ -1,0 +1,239 @@
+* {
+  margin: 0%;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+
+}
+
+.header {
+  width: 70%;
+  font-size: x-large;
+  padding-left: 5%;
+  color: whitesmoke;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: row;
+  background-color: #042357;
+  color: whitesmoke;
+  padding: 2%;
+}
+
+.navbar {
+  width: 30%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ol {
+  display: flex;
+  flex-direction: row;
+}
+
+li,
+a {
+  padding-left: 10px;
+  text-decoration: none;
+  list-style: none;
+  color: whitesmoke;
+}
+
+.section2 {
+  background-color: #e9eaec;
+}
+
+.search-flight,
+.section3 {
+  background-color: #fff;
+  margin: 4%;
+  padding: 2%;
+  border: 1px solid #042357;
+  border-radius: 15px;
+}
+
+label {
+  font-size: 18px;
+  color: #042357;
+}
+
+div>h2,
+.formbtn {
+  text-align: center;
+  justify-content: center;
+  color: #042357;
+}
+
+#searchForm {
+  font-family: sans-serif;
+}
+
+.formField {
+  display: flex;
+  flex-direction: right;
+  justify-content: space-evenly;
+  color: #042357;
+}
+
+.select {
+  border-radius: 36px;
+  display: inline-block;
+  overflow: hidden;
+  background: #cccccc;
+  border: 1px solid #042357;
+  margin-top: 5%;
+}
+
+select {
+  width: 140px;
+  height: 30px;
+  border: 0px;
+  outline: none;
+  padding-left: 10%;
+}
+
+.formbtn>button {
+  font-size: 18px;
+  color: #042357;
+  cursor: pointer;
+  margin-top: 3%;
+  font-family: sans-serif;
+  border: 1px solid #042357;
+  border-radius: 36px;
+  width: 12%;
+  padding: 0.8%;
+}
+
+.formbtn>button:hover {
+  background-color: #042357;
+  color: whitesmoke;
+}
+
+#flightDetail {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2%;
+}
+
+thead {
+  background-color: #042357;
+  color: whitesmoke;
+}
+
+th,
+td {
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid #042357;
+  width: 40px;
+  border-color: whitesmoke;
+  padding: 1%;
+}
+
+tr:nth-child(even) {
+  background-color: #a0b0cc;
+}
+
+tbody>tr:nth-child(odd) {
+  background-color: #e5e5e6;
+}
+
+tr:hover {
+  background-color: #042357 !important;
+  color: whitesmoke;
+}
+
+.edt-btn {
+  background-color: #e9eaec;
+  color: #042357;
+  cursor: pointer;
+  border-color: #042357;
+}
+
+.del-btn {
+  margin-left: 3px;
+  background-color: #e9eaec;
+  color: #042357;
+  cursor: pointer;
+  border-color: #042357;
+}
+
+.edt-btn:hover {
+  background-color: rgb(23, 192, 5);
+  color: whitesmoke;
+}
+
+.del-btn:hover {
+  background-color: rgb(213, 3, 3);
+  color: whitesmoke;
+}
+
+#editDialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  padding: 2%;
+  border: 1px solid #042357;
+  border-radius: 15px;
+  z-index: 1000;
+}
+
+.col1,
+.col2,
+.col3 {
+  width: 33.3%;
+}
+
+.row2,
+.row3 {
+  margin-top: 10%;
+  margin-bottom: 2%;
+}
+
+.formBody {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-left: 10%;
+}
+
+input {
+  border-radius: 36px;
+  border: 1px solid #042357;
+  margin-top: 5%;
+  width: 120px;
+  height: 30px;
+  outline: none;
+  padding-left: 10%;
+}
+
+#editmsg {
+  font-weight: bold;
+  color: green;
+  justify-content: center;
+  text-align: center;
+  margin-top: 2%;
+}
+
+#delete-msg {
+  font-weight: bold;
+  color: red;
+  justify-content: center;
+  text-align: center;
+  margin-top: 2%;
+}
+
+.footer {
+  width: auto;
+  color: whitesmoke;
+  background-color: #042357;
+  justify-content: center;
+  text-align: center;
+  padding: 3%;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deccan Air</title>
+    <link rel="stylesheet" href="editDelete_FlightDetails.css">
+</head>
+
+<body>
+    <div class="body">
+        <div class="section1">
+            <div class="header">
+                <p class="name">DECCAN Airline</p>
+            </div>
+            <div class="navbar">
+                <ol class="head-text">
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Log out</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="section2"><br><br>
+            <div class="search-flight">
+                <h2>Search by Flight Information</h2><br>
+                <form id="searchForm">
+                    <div class="formField">
+                        <div class="carrierName">
+                            <label for="carrierName">Carrier Name</label><br>
+                            <div class="select">
+                                <select id="carrierName" name="carrierName">
+                                    <option value="Air India">Air India</option>
+                                    <option value="Deccan Air">Decccan Air</option>
+                                    <option value="Indigo">Indigo</option>
+                                    <option value="Vistara">Vistara</option>
+                                </select>
+                            </div><br>
+                        </div>
+                        <div class="origin">
+                            <label for="origin">Origin</label><br>
+                            <div class="select">
+                                <select id="origin" name="origin">
+                                    <option value="Bangalore">Bangalore</option>
+                                    <option value="Covai">Covai</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Hyderabad">Hyderabad</option>
+                                </select>
+                            </div><br>
+                        </div>
+                        <div class="destination">
+                            <label for="destination">Destination</label><br>
+                            <div class="select">
+                                <select id="destination" name="destination">
+                                    <option value="Bangalore">Bangalore</option>
+                                    <option value="Covai">Covai</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Hyderabad">Hyderabad</option>
+                                </select>
+                            </div><br>
+                        </div>
+                    </div>
+                    <div class="formbtn ">
+                        <button type="button" onclick="searchFlights()">Search</button>
+                    </div>
+                </form>
+
+            </div>
+            <div class="section3">
+                <div class="flight-details-table">
+                    <h2>Flight Details</h2>
+                    <table id="flightDetail">
+                        <thead>
+                            <tr>
+                                <th>Carrier Name</th>
+                                <th>Origin</th>
+                                <th>Destination</th>
+                                <th>AirFare</th>
+                                <th>Business Class Seats</th>
+                                <th>Economy Class Seats</th>
+                                <th>Executive Class Seats</th>
+                                <th>Edit / Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="flightTable_tbody">
+
+                        </tbody>
+
+                    </table><br>
+                    <p id="delete-msg"></p>
+                </div>
+                <div class="buttons">
+
+                </div>
+            </div>
+            <div id="editDialog">
+                <h2>Edit Flight Details</h2><br>
+                <form id="editForm">
+                    <div class="formBody">
+                        <div class="col1">
+                            <div class="editCarrierName row1">
+                                <label for="editCarrierName">Carrier Name</label><br>
+                                <div class="select">
+                                    <select id="editCarrierName" name="editCarrierName" readonly>
+                                        <option value="Air India">Air India</option>
+                                        <option value="Deccan Air">Decccan Air</option>
+                                        <option value="Indigo">Indigo</option>
+                                        <option value="Vistara">Vistara</option>
+                                    </select>
+                                </div><br>
+                            </div>
+                            <div class="airFare row2">
+                                <label for="editAirFare">Air Fare</label><br>
+                                <input type="number" id="editAirFare" name="editAirFare" /><br>
+                            </div>
+                            <div class="executiveClassSeats row3">
+                                <label for="editExecutiveClassSeats">Executive Class Seats</label><br>
+                                <input type="number" id="editExecutiveClassSeats" name="editExecutiveClassSeats" /><br>
+                            </div>
+                        </div><br>
+                        <div class="col2">
+                            <div class="editOrigin row1">
+                                <label for="editOrigin">Origin</label><br>
+                                <div class="select">
+                                    <select id="editOrigin" name="editOrigin">
+                                        <option value="Bangalore">Bangalore</option>
+                                        <option value="Covai">Covai</option>
+                                        <option value="Chennai">Chennai</option>
+                                        <option value="Hyderabad">Hyderabad</option>
+                                    </select>
+                                </div><br>
+                            </div>
+
+                            <div class="businessClassSeats row2">
+                                <label for="editBusinessClassSeats">Business Class Seats</label><br>
+                                <input type="number" id="editBusinessClassSeats" name="editBusinessClassSeats" /><br>
+                            </div>
+                        </div><br>
+                        <div class="col3">
+                            <div class="editDestination row1">
+                                <label for="editDestination">Destination</label><br>
+                                <div class="select">
+                                    <select id="editDestination" name="editDestination">
+                                        <option value="Bangalore">Bangalore</option>
+                                        <option value="Covai">Covai</option>
+                                        <option value="Chennai">Chennai</option>
+                                        <option value="Hyderabad">Hyderabad</option>
+                                    </select>
+                                </div><br>
+                            </div>
+                            <div class="economyClassSeats row2">
+                                <label for="editEconomyClassSeats">Economy Class Seats</label><br>
+                                <input type="number" id="editEconomyClassSeats" name="editEconomyClassSeats" /><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="msg">
+                        <p id="editmsg"></p>
+                    </div>
+                    <div class="formbtn" id="edit-btn">
+                        <button type="button" onclick="editFlight()">Save</button>
+                        <button type="button" onclick="cancelFlight()">Cancel</button>
+                    </div>
+                    <div class="formbtn" id="close-btn">
+                        <button type="button" onclick="cancelFlight()">Close</button>
+                    </div>
+                </form>
+            </div><br><br><br><br><br>
+        </div>
+    </div>
+    <div class="footer">
+        <p class="ft-text">Deccan Airline pvt Ltd - Incorporated in England: 045895223 © 2024 All rights reserved. </p>
+    </div>
+    <script src="editDelete_FlightDetails.js"></script>
+</body>
+
+</html>
